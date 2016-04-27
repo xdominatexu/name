@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MsG-WL-xP5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lCN-S4-Nf5">
+            <objects>
+                <viewController id="MsG-WL-xP5" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KL2-X3-JX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="O5n-iu-dJy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XRj-8o-otX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ7-du-tae">
+                                <rect key="frame" x="283" y="376" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="RaU-r8-dtq">
+                                <rect key="frame" x="142" y="196" width="317" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="HsI-af-aZS"/>
+                                    <constraint firstAttribute="width" constant="317" id="rRH-np-asO"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Not Good"/>
+                                    <segment title="OK"/>
+                                    <segment title="Great"/>
+                                </segments>
+                                <connections>
+                                    <action selector="satisfactionControl:" destination="MsG-WL-xP5" eventType="valueChanged" id="5gc-QZ-wVq"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOa-Fx-hBC">
+                                <rect key="frame" x="142" y="285" width="317" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="317" id="acm-7K-ovg"/>
+                                    <constraint firstAttribute="height" constant="30" id="i56-eI-pgt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="insertMealAmount:" destination="MsG-WL-xP5" eventType="editingChanged" id="7U5-0k-3SK"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GZ7-du-tae" firstAttribute="centerX" secondItem="XRj-8o-otX" secondAttribute="centerX" id="CS0-CF-Pbb"/>
+                            <constraint firstItem="FOa-Fx-hBC" firstAttribute="centerX" secondItem="XRj-8o-otX" secondAttribute="centerX" id="Di1-sY-Lht"/>
+                            <constraint firstItem="RaU-r8-dtq" firstAttribute="centerX" secondItem="XRj-8o-otX" secondAttribute="centerX" id="Hbt-ss-RDi"/>
+                            <constraint firstItem="FOa-Fx-hBC" firstAttribute="top" secondItem="RaU-r8-dtq" secondAttribute="bottom" constant="61" id="Mt7-J2-qdZ"/>
+                            <constraint firstItem="O5n-iu-dJy" firstAttribute="top" secondItem="GZ7-du-tae" secondAttribute="bottom" constant="203" id="VOG-qr-WOq"/>
+                            <constraint firstItem="RaU-r8-dtq" firstAttribute="top" secondItem="KL2-X3-JX4" secondAttribute="bottom" constant="176" id="gYQ-8z-f27"/>
+                            <constraint firstItem="GZ7-du-tae" firstAttribute="top" secondItem="FOa-Fx-hBC" secondAttribute="bottom" constant="61" id="vq8-2g-dLG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountToTip" destination="GZ7-du-tae" id="T5V-Bb-69R"/>
+                        <outlet property="satisfaction" destination="RaU-r8-dtq" id="kj2-GL-afq"/>
+                        <outlet property="textField" destination="FOa-Fx-hBC" id="d2h-j7-x1G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ca-4F-y8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="502"/>
+        </scene>
+    </scenes>
+</document>
