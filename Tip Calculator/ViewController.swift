@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//I got it...Show me this comment...
 class ViewController: UIViewController {
     
     @IBAction func satisfactionControl(sender: UISegmentedControl) {
@@ -46,9 +46,5 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-
-
-
 }
 
