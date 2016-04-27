@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         }
         print(tip.calculateTip())
         amountToTip.text = String(tip.calculateTip())
-        
+        amountToTip.backgroundColor = UIColor.whiteColor()
     }
     
     @IBOutlet weak var satisfaction: UISegmentedControl!
